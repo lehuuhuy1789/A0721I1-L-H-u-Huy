@@ -8,17 +8,18 @@
 <form action="#">
     Độ C:
     <input name="Celsius" type="text" id="Celsius" value=""/>
-    <button type="button" onclick="chuyendoi()">Chuyển đổi</button>
+    <button type="button" onclick="chuyenDoi()">Chuyển đổi</button>
     Độ F:
-    <input name="Fahrenheit" type="text"/>
+    <input name="Fahrenheit" type="text" id="kq"/>
 </form>
 </body>
 </html>
 <script>
-    function chuyendoi() {
-        inputc = prompt("nhap do C: ");
-        let c = parseInt(inputc);
-        let F = (9*c/5)+32;
-        alert(F);
+    function chuyenDoi() {
+        //inputC = prompt("nhap do C: ");
+        let c = parseInt(document.getElementById("Celsius").value);
+        let f = (9*c/5)+32;
+        //alert(f);
+        document.getElementById("kq").value = f;
     }
 </script>
