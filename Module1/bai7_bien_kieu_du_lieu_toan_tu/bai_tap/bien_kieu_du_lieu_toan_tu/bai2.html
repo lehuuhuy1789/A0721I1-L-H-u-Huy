@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#">
+    Độ C:
+    <input name="Celsius" type="text" id="Celsius" value=""/>
+    <button type="button" onclick="chuyendoi()">Chuyển đổi</button>
+    Độ F:
+    <input name="Fahrenheit" type="text"/>
+</form>
+</body>
+</html>
+<script>
+    function chuyendoi() {
+        inputc = prompt("nhap do C: ");
+        let c = parseInt(inputc);
+        let F = (9*c/5)+32;
+        alert(F);
+    }
+</script>
