@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var hei = parseInt(prompt("Nhập chiều cao : "));
+    var wei = parseInt(prompt("Nhập cân nặng : "))
+    let bmi = wei / (parseInt(hei)^2)
+    if (bmi < 18){
+        alert("Underweight")
+    }else if (bmi < 25.0){
+        alert("Normal")
+    } else if (bmi < 30.0){
+        alert("Overweight")
+    }else{
+        alert("Obese")
+    }
+</script>
+</body>
+</html>
