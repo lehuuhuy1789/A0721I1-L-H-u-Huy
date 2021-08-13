@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế Thu Nhập Cá Nhân</title>
+</head>
+<body>
+
+<script>
+    let thuNhap=prompt('Nhập thu nhập của bạn trong tháng này:');
+    let tienThue;
+    if (thuNhap<=3000000) {
+        tienThue=thuNhap*0;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+    else if (thuNhap<=5000000) {
+        tienThue=thuNhap*0.05;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+    else if (thuNhap<=10000000) {
+        tienThue=thuNhap*0.1;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+    else if (thuNhap<=15000000) {
+        tienThue=thuNhap*0.15;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+    else if (thuNhap<=20000000) {
+        tienThue=thuNhap*0.2;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+    else if (thuNhap<=40000000) {
+        tienThue=thuNhap*0.25;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+    else if (thuNhap<=80000000) {
+        tienThue=thuNhap*0.3;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+    else {
+        tienThue=thuNhap*0.35;
+        alert('Tiền thuế bạn cần phải đóng là ' +tienThue+ ' VNĐ');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="kq"></h1>
+<h1 id="kq1"></h1>
+<h1 id="kq2"></h1>
+<script>
+    let a = prompt("Nhập số A");
+    let b = prompt("Nhập số B");
+    let c = prompt("Nhập số C");
+    let delta = (parseInt(b)*parseInt(b))-(4*parseInt(a)*parseInt(c));
+    let x1;
+    let x2;
+    if (delta < 0 ){
+        alert("Phương trình vô nghiệm");
+    }else if (denta==0) {
+        x1 = (-b)/(2*a);
+        x2 = (-b)/(2*a);
+        document.getElementById('kq').innerHTML = 'Phương trình có nghiệm kép x1, x2 là ';
+        document.getElementById('kq1').innerHTML = 'x1 là ' + x1;
+        document.getElementById('kq2').innerHTML = 'x2 là ' + x2;
+    }
+    else {
+        x1 = (-b+Math.sqrt(denta))/(2*a);
+        x2 = (-b-Math.sqrt(denta))/(2*a);
+        document.getElementById('kq').innerHTML = 'Phương trình có 2 nghiêm phân biệt x1,x2';
+        document.getElementById('kq1').innerHTML = 'x1 là ' + x1;
+        document.getElementById('kq2').innerHTML = 'x2 là ' + x2;
+    }
+</script>
+</body>
+</html>

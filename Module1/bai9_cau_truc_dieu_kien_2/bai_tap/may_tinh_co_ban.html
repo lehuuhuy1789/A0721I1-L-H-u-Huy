@@ -68,43 +68,45 @@
     </style>
 </head>
 <body>
-<form name="caculator">
-    <table>
-        <tr>
-            <td colspan="4">
-                <input type="text" id="Result" value="">
-            </td>
-        </tr>
-        <tr>
-            <td><input type="button"  class="number"  value="1" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="2" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="3" onclick="so(this.value)"/></td>
-            <td><input type="button"  value="+" class="operator" onclick="so(this.value)"/></td>
-        </tr>
-        <tr>
-            <td><input type="button"  class="number" value="4" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="5" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="6" onclick="so(this.value)"/></td>
-            <td><input type="button"  value="-" class="operator" onclick="so(this.value)"/></td>
-        </tr>
-        <tr>
-            <td><input type="button"  class="number" value="7" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="8" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="9" onclick="so(this.value)"/></td>
-            <td><input type="button"  value="*" class="operator" onclick="so(this.value)"/></td>
-        </tr>
-        <tr>
-            <td><input type="button"  class="number" value="C" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="0" onclick="so(this.value)"/></td>
-            <td><input type="button"  class="number" value="=" onclick="so(this.value)"/></td>
-            <td><input type="button"  value="/" class="operator" onclick="so(this.value)"/></td>
-        </tr>
-    </table>
-</form>
-</body>
-</html>
+<table>
+    <tr>
+        <td colspan="4"><input id="nhap" type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="2" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="3" onclick="nhap(this.value)"  style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="+" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="5" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="6" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="-" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="8" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="9"  onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="*" onclick="nhap('*')" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="c"onclick="xoa()" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="0"onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="=" onclick="tinh()" style="height: 40px; width: 40px" onclick="tinh()"></td>
+        <td><input type="button" value="/" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+</table>
 <script>
-    function so(i) {
-        document.getElementById('Result').value += i;
+    function nhap(so) {
+        document.getElementById("nhap").value +=so;
+    }
+    function tinh(){
+        let string = document.getElementById("nhap").value;
+        document.getElementById("nhap").value= eval(string);
+    }
+    function xoa() {
+        document.getElementById("nhap").value="";
     }
 </script>
+</body>
