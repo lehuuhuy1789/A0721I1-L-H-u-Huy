@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hiển Thị 20 số trong dãy Fibonacci</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
     let fibonacci="";
     let so = new Array();
-    for (let i=0;i<20;i++) {
+    let i;
+    for (i=0;i<20;i++) {
         if (i==0) {
             so[0]=0;
             fibonacci = so[0] +' , ';
-            document.write(fibonacci);
         }
         else if (i==1) {
             so[1]=1;
             fibonacci = so[1] +' , ';
-            document.write(fibonacci);
         }
         else {
             so[i]=so[i-1] + so[i-2];
             fibonacci = so[i] +' , ';
-            document.write(fibonacci);
+            if (so[i]%5==0) {
+                chia5=so[i];
+                break;
+            }
         }
     }
+    document.write('Số đầu tiên trong dãy Fibonacii chia hết cho 5 là: ' +chia5);
 </script>
 </body>
 </html>
