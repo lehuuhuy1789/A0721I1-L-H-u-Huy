@@ -2,29 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hiển Thị 20 số trong dãy Fibonacci</title>
+    <title>ABC</title>
 </head>
 <body>
 <script>
-    let fibonacci="";
-    let so = new Array();
-    for (let i=0;i<20;i++) {
-        if (i==0) {
-            so[0]=0;
-            fibonacci = so[0] +' , ';
-            document.write(fibonacci);
-        }
-        else if (i==1) {
-            so[1]=1;
-            fibonacci = so[1] +' , ';
-            document.write(fibonacci);
-        }
-        else {
-            so[i]=so[i-1] + so[i-2];
-            fibonacci = so[i] +' , ';
-            document.write(fibonacci);
-        }
-    }
+    let f0=0;
+    let f1=1;
+    let f=f0+f1;
+    let result= f0+","+f1+",";
+    for(i=0;i<18;i++){
+        result += f + ",";
+        f0=f1;
+        f1=f;
+        f=f0+f1;
+    }alert(result);
 </script>
 </body>
 </html>
