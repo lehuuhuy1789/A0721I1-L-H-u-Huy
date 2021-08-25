@@ -8,9 +8,14 @@
 <body>
 <script>
     let chuoi = "CodeGym Da Nang";
-    let a = chuoi.length;
     document.write("Chuỗi: "+chuoi + "</br>");
-    document.write("Số từ trong chuỗi là: " +a );
+    let dem = 0;
+    let mang = chuoi.split(' ');
+    document.write("Mảng: "+mang+ "</br>");
+    for(let i=0;i<mang.length;i++){
+            dem++;
+    }
+    document.write("Số từ trong chuỗi là: " +dem );
 </script>
 </body>
 </html>
