@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.-->
+<body>
+<script>
+    let n = prompt('Nhập số phần tử trong mảng: ');
+    let tao =[];
+    for (let i=0; i<n; i++ ) {
+        tao[i]=Number(prompt('Nhập số trong dãy n số: '));
+    }
+    document.write('tao = ['+tao+']<br/> ');
+    document.write("Các phần tử bị đảo ngược thành: " + tao.reverse());
+</script>
+</body>
+</html>
