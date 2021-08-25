@@ -9,12 +9,16 @@
 <body>
 <script>
     let mang = [];
-    for (let i=0; i<2;i++) {
+    for (let i=0; i<10;i++) {
         mang[i]=prompt('Nhập chuỗi kí tự bất kì: ') //Code-Gym,-Da-Nang
     }
-    document.write("mang = ["+mang+"] </br> ");
-    let new_mang = mang.replace(/-/g, '_');
-    document.write(new_mang);
+    document.write("mang = ["+mang+"]<br/>");
+    for (let j=0;j<mang.length;j++){
+        if(mang[j]=="-"){
+            mang[j]="_";
+        }
+    }
+    document.write("Mảng hiện tại: " +"mang = ["+mang+"]<br/>");
 </script>
 </body>
 </html>
