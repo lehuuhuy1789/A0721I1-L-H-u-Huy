@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<input type="text" name="nhap" id="tAnh" value="">
+<input type="button" name="translate" value="Dịch" onclick=dich()>
+<p id="newValue">Dịch</p>
+<script>
+    let tAnh = document.getElementById("tAnh");
+    let tiengAnh = ["hello", "goodbye", "bike", "happy", "hungry"];
+    document.write("Chỉ có thể dịch được các từ (" + tiengAnh.join() + ")")
+    let tiengViet = ["Chào", "Tạm Biệt", "Xe đạp", "Vui vẻ", "Đói"];
+    let result = 0;
+
+    function dich() {
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (tiengAnh[i] == tAnh.value) {
+                result = 0;
+                document.getElementById("newValue").innerText = "Translate : " + tiengViet[i];
+                break;
+            } else {
+                result++;
+            }
+        }
+        if (result != 0) {
+            alert("Bạn nhập ngoài vùng chưa dữ liệu Tiếng Anh vui lòng nhập lại");
+        }
+    }
+</script>
+</body>
+
+</html>
