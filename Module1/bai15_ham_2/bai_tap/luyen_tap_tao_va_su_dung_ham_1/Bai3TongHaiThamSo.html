@@ -13,14 +13,14 @@ Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số
     let numberB = parseInt(prompt("Input number 2 : "));
 
     function tinhTong(numberA, numberB) {
-        while (true){
+
             if (numberA > numberB) {
                 alert("Number A > B");
-                let x = parseInt(prompt("Input number A : "));
-                let y = parseInt(prompt("Input number B : "));
-            }
+                return "không có kết quả";
+            }else {
                 return numberA + numberB;
-        }
+            }
+
     }
     document.write("Tổng của " + numberA + " và " + numberB + " là: " + tinhTong(numberA, numberB));
 </script>

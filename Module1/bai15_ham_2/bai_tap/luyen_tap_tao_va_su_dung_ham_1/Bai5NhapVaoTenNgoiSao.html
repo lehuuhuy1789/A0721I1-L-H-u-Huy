@@ -21,15 +21,15 @@
     function findStars(sao) {
         for (let i=0;i<tenSao.length;i++) {
             if (sao==tenSao[i]) {
-                i = index;
+                index = i;
                 return chomSao[index];
             }
         }
-        return ''
+        return '-1'
     }
     let inputName = prompt('Nhập tên ngôi sao');
     let star = findStars(inputName)
-    if (star =='') {
+    if (star =='-1') {
         alert('Tên nhập vào không trùng khớp với tên các ngôi sao trong dữ liệu')
     }
     else {
