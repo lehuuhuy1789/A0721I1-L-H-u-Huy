@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Cho một mảng các số nguyên, hãy tìm tổng các phần tử của nó.
+    Ví dụ, nếu mảng ar = [1,2,3], 1+2+3 = 6 vì vậy trở lại 6.
+    Mô tả chức năng
+    Hoàn thành hàm simpleArraySum trong trình chỉnh sửa bên dưới. Nó phải trả về tổng của các phần tử mảng là một số nguyên.
+    simpleArraySum có (các) tham số sau:
+    ar : một mảng các số nguyên
+    Định dạng đầu vào
+    Dòng đầu tiên chứa một số nguyên, n, biểu thị kích thước của mảng.
+    Dòng thứ hai chứa n các số nguyên được phân tách bằng dấu cách đại diện cho các phần tử của mảng.
+    Hạn chế:
+                0<n,ar[i]=<1000
+    Định dạng đầu ra
+    In tổng các phần tử của mảng dưới dạng một số nguyên duy nhất.-->
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập n số nguyên trong mảng: "));
+    let ar = [];
+    let tong = 0;
+    for(let i=0;i<n;i++){
+        ar[i] = parseInt(prompt("Nhập các phần tử:"));
+        tong += ar[i];
+    }
+    document.write('ar = ['+ar+']<br/>');
+    document.write('Tổng của các phần tử trong mảng là: ' +tong);
+</script>
+</body>
+</html>
