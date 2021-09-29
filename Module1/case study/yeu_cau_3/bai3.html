@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let numerators = [];
+    let denominators = [];
+    let size = parseInt(prompt("Nhập độ dài của mảng"));
+
+    for (let i=0; i<size; i++){
+        numerators.push(parseInt(prompt("Nhập vào tử số")))
+        denominators.push(parseInt(prompt("Nhập vào mẫu số")))
+    }
+    
+    function maxFraction(numerators, denominators) {
+        let maxInder = 0;
+        for (let i=1; i<numerators.length; i++){
+            if (numerators[maxInder] * denominators[i] < numerators[i] * denominators[maxInder]){
+                maxInder = i;
+            }
+        }
+        return maxInder;
+    }
+    alert("Chỉ số của phân số lớn nhất là: "+ maxFraction(numerators, denominators));
+</script>
+
+</body>
+</html>
