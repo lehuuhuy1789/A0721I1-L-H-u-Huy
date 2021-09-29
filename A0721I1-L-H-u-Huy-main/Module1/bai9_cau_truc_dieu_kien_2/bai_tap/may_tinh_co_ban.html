@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính cơ bản</title>
+    <style>
+        form {
+            background: MediumSeaGreen;
+            margin: 0 auto;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        form * {
+            box-sizing: border-box;
+        }
+        form table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        form table tr, form table td {
+            border: 1px solid rgb(60, 179, 113);
+            width: 25%;
+        }
+        form table tr:first-child input {
+            height: 50px;
+            padding: 0 10px;
+            font-weight: 700;
+        }
+        form table tr:not(:first-child) td {
+            height: 70px;
+        }
+        form table tr:not(:first-child) td input {
+            height: 100%;
+        }
+        form table input {
+            width: 100%;
+            display: block;
+            border: 0;
+            font-size: 25px;
+        }
+        form table input:focus {
+            outline: none;
+        }
+        form table input:hover {
+            background: rgb(164, 189, 105);
+            transition: all .2s ease-in-out;
+        }
+        form table operator:hover {
+            background: #eee;
+            transition: all .2s ease-in-out;
+        }
+        form table input.operator {
+            cursor : pointer;
+            font-weight: 700;
+            color:  DodgerBlue;
+            background: rgb(255, 255, 103);
+        }
+        form table input.operator:hover {
+            background: #5f4621;
+            transition: all .2s ease-in-out;
+        }
+        form table input.number:hover {
+            cursor: grab;
+            background:peachpuff;
+            transition: all .1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input id="nhap" type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="2" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="3" onclick="nhap(this.value)"  style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="+" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="5" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="6" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="-" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="8" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="9"  onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="*" onclick="nhap('*')" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="c"onclick="xoa()" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="0"onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="=" onclick="tinh()" style="height: 40px; width: 40px" onclick="tinh()"></td>
+        <td><input type="button" value="/" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+</table>
+<script>
+    function nhap(so) {
+        document.getElementById("nhap").value +=so;
+    }
+    function tinh(){
+        let string = document.getElementById("nhap").value;
+        document.getElementById("nhap").value= eval(string);
+    }
+    function xoa() {
+        document.getElementById("nhap").value="";
+    }
+</script>
+</body>

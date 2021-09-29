@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[];
+    let b=[];
+    let temp = 0
+    let n = parseInt(prompt("Nhập vào độ dài mảng a"))
+    for (let i=0;i<n;i++) {
+        // cách 1: a[i]=Number(prompt("Nhập số"));
+        a.push(parseInt(prompt("Nhập số")));
+    }
+    document.write("Mảng a=["+a+"]<br/>");
+    for (let i=0;i<a.length;i++) {
+        temp += a[i];
+        b[i] = temp;
+    }
+    document.write("Mảng prefixSums b=["+b+"]");
+</script>
+</body>
+</html>

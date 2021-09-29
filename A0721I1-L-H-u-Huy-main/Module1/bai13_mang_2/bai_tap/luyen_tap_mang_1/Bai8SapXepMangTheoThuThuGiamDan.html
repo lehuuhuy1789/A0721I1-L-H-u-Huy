@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.-->
+<body>
+<script>
+    let n = prompt('Nhập số phần tử trong mảng: ');
+    let tao =[];
+    for (let i=0; i<n; i++ ) {
+        tao[i]=Number(prompt('Nhập số trong dãy 10 số: '));
+    }
+    document.write('tao = ['+tao+']<br/> ');
+    document.write("Mảng đã được sắp xếp là: " + tao.sort(function(a, b) {return b - a}));
+</script>
+</body>
+</html>

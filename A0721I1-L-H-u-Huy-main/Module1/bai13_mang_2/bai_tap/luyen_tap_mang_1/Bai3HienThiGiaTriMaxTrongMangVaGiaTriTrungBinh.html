@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+In ra giá trị trung bình của các phần tử trong mảng.-->
+<body>
+<script>
+    let n = prompt('Nhập số phần tử trong mảng: ');
+    let tao =[];
+    let sum = 0;
+    for (let i=0; i<n; i++ ) {
+        tao[i]=Number(prompt('Nhập số trong dãy 10 số: '));
+        sum += tao[i];
+    }
+    document.write('tao = ['+tao+']<br/> ')
+    /*Công thức tìm phần tử có giá trị lớn nhất trong mảng*/
+    document.write("Phần tử có giá trị lớn nhất trong mảng là: " + Math.max(...tao) +'<br>');
+    trungBinh = sum/tao.length;
+    document.write('Giá trị trung bình của các phần tử trong mảng là: ' +trungBinh);
+</script>
+</body>
+</html>

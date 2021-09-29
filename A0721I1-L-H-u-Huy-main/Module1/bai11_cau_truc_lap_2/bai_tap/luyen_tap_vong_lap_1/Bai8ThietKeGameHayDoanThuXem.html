@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiết kế game "hãy đoán thử xem"</title>
+</head>
+<body>
+<button onclick="play()"> Play</button>
+</body>
+<script>
+    function play() {
+        let min = parseInt(prompt("nhập vào giá trị nhỏ nhật"));
+        let max = parseInt(prompt("nhập vào giá trị lớn nhát"));
+        let random= min+Math.ceil(Math.random()*(max-min));// tạo số random nằm trong khoảng từ min-max
+        let choose;
+        let count =0;
+        do {
+            choose = prompt("nhập số bạn đoán");
+            count++;
+            if (choose==random){
+                alert("bạn đã đoán đúng");
+                break;
+            }else if(choose<random){
+                alert("số bạn nhập nhỏ hơn kết quả");
+            }else {
+                alert("số bạn nhập lớn hơn kết quả");
+            }
+            if (count==3){
+                alert("bạn đã hết quyền đoán, chời lại");
+                break;
+            }
+
+        }while (true)
+
+    }
+</script>
+</html>

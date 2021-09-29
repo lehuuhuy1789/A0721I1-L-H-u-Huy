@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Alice và Bob mỗi người tạo ra một vấn đề cho HackerRank. Một người đánh giá xếp hạng hai thử thách, cho điểm trên
+    thang điểm từ 1 đến 100 cho ba hạng mục: độ rõ ràng , tính độc đáo và độ khó của vấn đề .
+
+    Xếp hạng cho thử thách của Alice là bộ ba a = (a [0], a [1], a [2]) và xếp hạng cho thử thách của Bob là
+    bộ ba b = (b [0], b [1], b [2]) .
+
+    Nhiệm vụ là tìm điểm so sánh của chúng bằng cách so sánh a [0] với b [0] , a [1] với b [1] , và a [2] với b [2] .
+
+    Nếu a [i]> b [i] , thì Alice được thưởng 1 điểm.
+    Nếu a [i] <b [i] , thì Bob được thưởng 1 điểm.
+                 Nếu a [i] = b [i] , thì không người nào nhận được điểm.
+                 Điểm so sánh là tổng số điểm mà một người kiếm được.
+
+                 Cho trước a và b , xác định điểm so sánh tương ứng của chúng.-->
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5, 6, 7, 8]
+    let b = [8, 7, 6, 5, 4, 3, 2, 1]
+    let Alice = 0;
+    let Bob = 0;
+    for(let i=0;i<a.length&&i<b.length;i++){
+        if(a[i]>b[i]){
+            Alice++;
+        }else if(a[i]<b[i]){
+            Bob++;
+        }else{
+        }
+    }
+    document.write('a = ['+a+']</br> ');
+    document.write('b = ['+b+']</br> ');
+    document.write("Số điểm của Alice là: "+Alice+"</br>");
+    document.write("Số điểm của Bob là: "+Bob);
+</script>
+</body>
+</html>

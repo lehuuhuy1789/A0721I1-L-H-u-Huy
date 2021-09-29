@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại
+ thông báo cho người dùng.
+Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.-->
+<script>
+    let numberA = parseInt(prompt("Input number 1 : "));
+    let numberB = parseInt(prompt("Input number 2 : "));
+
+    function tinhTong(numberA, numberB) {
+
+            if (numberA > numberB) {
+                alert("Number A > B");
+                return "không có kết quả";
+            }else {
+                return numberA + numberB;
+            }
+
+    }
+    document.write("Tổng của " + numberA + " và " + numberB + " là: " + tinhTong(numberA, numberB));
+</script>
+</body>
+</html>

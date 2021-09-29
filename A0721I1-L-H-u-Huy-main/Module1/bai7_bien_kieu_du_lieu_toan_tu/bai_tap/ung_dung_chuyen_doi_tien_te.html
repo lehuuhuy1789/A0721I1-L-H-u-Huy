@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        tr{
+            text-align: center;
+        }
+        button{
+            background: mediumpurple;
+            color: white;
+            border-color: lightblue;
+        }
+        table{
+            width: 50%;
+        }
+    </style>
+</head>
+<form>
+    <table align="center">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="input"></td>
+            <td>
+                <select id="option1">
+                    <option value="VNĐ">VietNam</option>
+                    <option value="USD">USD</option>
+                </select>
+
+            </td>
+            <td>
+                <select id="option2">
+                    <option value="USD">USD</option>
+                    <option value="VNĐ">VietNam</option>
+                </select>
+            </td>
+            <td><button type="button" onclick="convert()">Convert</button></td>
+        <tr><td align="left" style="color: blue"><p id="rs"></p></td></tr>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+<script>
+    function convert() {
+        let input = document.getElementById("input").value;
+        let option1 = document.getElementById("option1").value;
+        let option2 = document.getElementById("option2").value;
+        let result;
+        if (option1 == "VNĐ" && option2 == "USD") {
+            result = input / 23000;
+            document.getElementById("rs").innerHTML = "Result: " + result + " USD";
+        } else if (option1 == "USD" && option2 == "VNĐ") {
+            result = input * 23000;
+            document.getElementById("rs").innerHTML = "Result: " + result + " VNĐ";
+        } else if (option1 == option2) {
+            alert("Error!");
+        }
+    }
+</script>

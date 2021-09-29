@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+Chương trình tìm xem V có nằm trong mảng số nguyên không?
+Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+-->
+<body>
+<script>
+    let tao =[1,3,5,13,24,63,47,8,11,32];
+    let n = Number(prompt('Nhập phần tử số nguyên V: '));
+    // Cách 1:
+
+    /*Công thức để xác định phần tử nào đó có trong mảng hay ko? Giá trị trả về là True or False*/
+    // document.write("Phần tử V có nằm trong mảng số nguyên ko? " +tao.includes(n));
+
+    // Cách 2:
+    let flag = false;
+    for(let i=0;i<tao.length;i++){
+        if(tao[i]==n) {
+            flag = true;
+            break;
+        }
+    }
+    document.write("Mảng số đã cho là: " + "tao = ["+tao+"]</br>");
+    if(flag){           // trong if tự hiểu flag thành flag==true
+        document.write("V is in the array");
+    }else {
+        document.write("V is not in the array");
+    }
+</script>
+</body>
+</html>

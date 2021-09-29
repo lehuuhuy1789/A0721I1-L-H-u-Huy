@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị 20 số trong dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let f0=0;
+    let f1=1;
+    let f=f0+f1;
+    let result= f0+","+f1+",";
+    for(i=0;i<18;i++){
+        if(f%5==0){
+            alert("Số đầu tiên chia hết cho 5 là: "+f);
+            break;
+        }
+        result += f + ",";
+        f0=f1;
+        f1=f;
+        f=f0+f1;
+    }
+</script>
+</body>
+</html>
+</html>

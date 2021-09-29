@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao
+ nhiêu số nguyên lớn hơn hoặc bằng 10.-->
+<body>
+<script>
+    let tao =[];
+    let count =[];
+    for (let i=0; i<10; i++ ) {
+        tao[i]=Number(prompt('Nhập số trong dãy 10 số: '));
+    }
+    document.write('tao = ['+tao+']<br/> ')
+    for (let k=0;k<tao.length;k++) {
+        if (tao[k]>=10) {
+            count.push(tao[k]);
+        }
+    }
+    document.write('Các số nguyên lớn hơn 10 là: '+count.join(","));
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x; // x là số dòng in ra
+    let y; // y là số cột trên 1 dòng
+    let sout = "<table border='1' width='900' cellspacing='0' cellpadding='3'>"
+    for (x=1;x<=9;x++) {
+        sout=sout + "<tr>";
+        for (y=2;y<=9;y++) {
+            sout=sout + "<td>" +y +"x"+x + "="+ y*x+ "</td>"
+        }
+        sout=sout + "</tr>";
+    }
+    sout=sout + "</table>"
+    document.write(sout);
+</script>
+
+
+</body>
+</html>

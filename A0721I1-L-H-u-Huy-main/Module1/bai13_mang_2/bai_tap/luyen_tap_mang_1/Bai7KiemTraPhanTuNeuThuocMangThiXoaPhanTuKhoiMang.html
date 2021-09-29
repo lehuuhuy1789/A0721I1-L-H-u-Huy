@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+(Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+-->
+<body>
+<script>
+    // Cách 1: nhưng chưa đúng bản chất đề bài cho
+    /*let tao =[1,3,5,13,24,63,47,8,11,32];
+    let n = Number(prompt('Nhập phần tử số nguyên V: '));
+    let flag = false;
+    let index =0;
+    for(let i=0;i<tao.length;i++){
+        if(tao[i]==n) {
+            flag = true;
+            index = i;
+        }
+    }
+    document.write("Mảng số đã cho là: " + "tao = ["+tao+"]</br>");
+    if(flag==true){
+        tao.splice(index,1);
+        tao.push(0);
+        document.write("Mảng số hiện tại là: " + "tao = ["+tao+"]</br>");
+    }else {
+        document.write("V không nằm trong mảng");
+    }*/
+
+
+    // Cách 2:
+    tao =[5,2,2,2,6,7];
+    let n = Number(prompt('Nhập phần tử số nguyên V: '));
+    for(let i=0;i<tao.length;i++){
+        if(n==tao[i]){
+            for(let j=i; j<tao.length-1;j++){
+                tao[j]=tao[j+1];
+            }
+            tao[tao.length-1]=0;
+            document.write("xóa: "+tao+"</br>");
+            i--;
+        }
+    }
+    document.write("Mảng sau cùng: "+tao);
+</script>
+</body>
+</html>
